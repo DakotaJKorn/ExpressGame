@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 90vw;
+            background-color:wheat;
+            margin-left: 5vw;
+            min-width: 800px;
+            min-height: 700px;
+        }
+
+        #headerText{
+            font-size: x-large;
+        }
+        #headerSubtext{
+            font-size: large;
+        }
+        #headerSubsubtext{
+            font-size: medium;
+        }
+        #gameView{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            width: 800px;
+            background-color:indianred;
+            border-radius: 30px;
+            min-height: 500px;
+        }
+        #code{
+            margin-top: -100px;
+            margin-bottom: 50px;
+            font-size: 100px;
+        }
+        #buttons{
+
+            height: 75px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 150px;
+            background-color:papayawhip;
+            margin-left: 40px;
+            border-radius: 5px;
+            border: 3px solid maroon;
+            cursor: pointer;
+            color: black;
+        }
+        .button:hover{
+            background-color:peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p id="headerText">CONGRADULATIONS!!!</p>
+        <p id="headerSubtext">You unlocked the secret code!</p>
+        <div id="gameView">
+            <div id="code">
+                <%= num1 %> <%= num2 %> <%= num3 %> <%= num4 %>
+            </div>
+            <div id="buttons">
+                <a href="/" ><div class="button">New Game</div></a>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
