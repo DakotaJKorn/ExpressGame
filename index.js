@@ -44,9 +44,7 @@ app.set("view engine", "ejs");
 app.get('/', (request, response) => {
 
         let invalidLogin = request.query.reason || null;
-
-        const user = request.session ? request.session.username: "user not set";
-                 response.render("index", {my_user: request.session.username, error: invalidLogin});
+                 response.render("index", {error: invalidLogin});
 });
 
 app.post('/signup',(request, response) => {
