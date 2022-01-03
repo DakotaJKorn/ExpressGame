@@ -31,7 +31,7 @@ const req = require('express/lib/request');
         
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
+app.use(express.static(__dirname + '/public'));
 app.use(session({
         secret: 'random string',
         resave: false,
@@ -60,7 +60,7 @@ app.post('/signup',(request, response) => {
                 request.session.username = username;
                 request.session.password = pass;
                 request.session.valid = true;
-                response.redirect("/main");
+                response.render("home", {my_user: request.session.username});
         }
         else{
                 request.session.destroy(() => {});
